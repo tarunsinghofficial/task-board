@@ -118,7 +118,7 @@ export const useStore = create<BoardState>()(
                     tasks: state.tasks.filter((t) => t.id !== id),
                 })),
 
-                moveTask: (taskId, sourceColumnId, targetColumnId, newIndex) => set((state) => {
+                moveTask: (taskId, _sourceColumnId, targetColumnId, newIndex) => set((state) => {
                     const task = state.tasks.find((t) => t.id === taskId);
                     if (!task) return state;
 
