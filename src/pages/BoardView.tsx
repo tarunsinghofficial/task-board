@@ -48,7 +48,7 @@ export const BoardView = () => {
             </div>
             <div className='mt-10'>
                 <div className='flex justify-between'>
-                    <h1 className="text-3xl font-bold text-gray-800 mb-8">Your Boards</h1>
+                    <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 mb-8">Your Boards</h1>
                     <button
                         onClick={() => setIsModalOpen(true)}
                         className="mb-8 p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center gap-2 hover:cursor-pointer"

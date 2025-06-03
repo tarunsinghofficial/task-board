@@ -96,7 +96,7 @@ export const BoardDetail = () => {
                                     Created: {new Date(board.createdAt).toLocaleDateString()}
                                 </p>
                             </div>
-                            <div className="flex gap-4">
+                            <div className="flex flex-col md:flex-row lg:flex-row gap-4">
                                 <button
                                     onClick={() => navigate('/')}
                                     className="px-4 py-2 border border-gray-300 text-white rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 flex items-center justify-center gap-2 hover:cursor-pointer"
@@ -113,7 +113,7 @@ export const BoardDetail = () => {
                             </div>
                         </div>
 
-                        <div className="mt-4 flex gap-4 items-center">
+                        <div className="mt-4 flex flex-wrap md:flex-row lg:flex-row gap-4 items-center">
                             <span className="text-gray-300">Filter by:</span>
                             <select
                                 value={filterPriority}
