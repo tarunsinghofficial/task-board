@@ -67,3 +67,11 @@ src/
 ├── main.tsx          # Entry point
 ├── ...other files
 ```
+
+## Screenshots
+
+**1. Board View Page**
+![image](https://github.com/user-attachments/assets/3f900b3b-9aa3-4e1c-b835-d9967e9495d0)
+
+**2. Board Detail Page**
+![image](https://github.com/user-attachments/assets/04720705-01ef-45f2-a7ad-700f78213df5)
