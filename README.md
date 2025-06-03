@@ -1,54 +1,69 @@
-# React + TypeScript + Vite
+# Task Board Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+A simple task board application built with React and TypeScript like a Trello. This application allows users to create boards, add columns to boards, and add tasks to columns. Tasks can be moved and reordered using drag-and-drop, and filtered/sorted.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Board View:**
+  - Create new boards.
+  - View a list of all boards.
+  - Navigate to a detailed view of a board.
+  - Delete boards.
+- **Board Detail Page:**
+  - View columns within a board.
+  - Add new columns.
+  - Delete columns.
+  - Add tasks within columns.
+  - Edit task details (title, description, priority, due date, assignee).
+  - Delete tasks.
+  - Drag and drop tasks to move them between columns.
+  - Drag and drop tasks to reorder them within the same column.
+  - Filter tasks by priority and assignee.
+  - Sort tasks by due date or priority.
+- **State Management:** Data is managed using Zustand and persisted in Local Storage.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- React
+- TypeScript
+- Zustand (for state management)
+- React DnD (for drag and drop)
+- React Router (for navigation)
+- Tailwind CSS (for styling)
+- Vite (for development and building)
+
+## Setup and Running the Project
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository_url>
+    cd task-board
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or yarn install
+    ```
+3.  **Start the development server:**
+
+    ```bash
+    npm run dev
+    # or yarn dev
+    ```
+
+    The application will open in your browser, usually at `http://localhost:5173/`.
+
+## Project Structure
+
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+src/
+├── components/       # Reusable UI components (e.g., Column, TaskCard)
+├── pages/            # Top-level components representing pages (BoardView, BoardDetail)
+├── store/            # Zustand store definition
+├── types/            # TypeScript type definitions
+├── App.tsx           # Main application component and routing
+├── main.tsx          # Entry point
+├── ...other files
 ```
